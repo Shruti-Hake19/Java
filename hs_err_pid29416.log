@@ -1,0 +1,215 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=29416, tid=9536
+#
+# JRE version:  (20.0.2+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.0.2+9-78, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.1\lib\idea_rt.jar=56833:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 Filehandling.copyFile
+
+Host: AMD Ryzen 5 5600H with Radeon Graphics         , 12 cores, 7G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3374)
+Time: Tue Apr 16 00:27:48 2024 India Standard Time elapsed time: 0.017710 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000254619104d0):  JavaThread "Unknown thread" [_thread_in_vm, id=9536, stack(0x0000007086100000,0x0000007086200000)]
+
+Stack: [0x0000007086100000,0x0000007086200000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6bc25a]
+V  [jvm.dll+0x84971a]
+V  [jvm.dll+0x84b315]
+V  [jvm.dll+0x84ba13]
+V  [jvm.dll+0x280e4f]
+V  [jvm.dll+0xbce65]
+V  [jvm.dll+0x3294c5]
+V  [jvm.dll+0x8123aa]
+V  [jvm.dll+0x3c1261]
+V  [jvm.dll+0x7fe103]
+V  [jvm.dll+0x44ccaf]
+V  [jvm.dll+0x44e621]
+C  [jli.dll+0x5287]
+C  [ucrtbase.dll+0x29333]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa48]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffb3042b118, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000254619104d0 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=9536, stack(0x0000007086100000,0x0000007086200000)]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.012 Loaded shared library C:\Program Files\Java\jdk-20\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6111c0000 - 0x00007ff6111d0000 	C:\Program Files\Java\jdk-20\bin\java.exe
+0x00007ffbf2670000 - 0x00007ffbf2886000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffbf0930000 - 0x00007ffbf09f4000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffbefff0000 - 0x00007ffbf0397000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffbefdb0000 - 0x00007ffbefec1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffbeaf70000 - 0x00007ffbeaf8b000 	C:\Program Files\Java\jdk-20\bin\VCRUNTIME140.dll
+0x00007ffbeaed0000 - 0x00007ffbeaee9000 	C:\Program Files\Java\jdk-20\bin\jli.dll
+0x00007ffbf0810000 - 0x00007ffbf08c2000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffbf2580000 - 0x00007ffbf2627000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffbf0740000 - 0x00007ffbf07e8000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffbefae0000 - 0x00007ffbefb08000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffbf0ba0000 - 0x00007ffbf0cb5000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffbf03b0000 - 0x00007ffbf055e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffbefab0000 - 0x00007ffbefad6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffbd85a0000 - 0x00007ffbd8833000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3235_none_270f74e173860f98\COMCTL32.dll
+0x00007ffbf0ab0000 - 0x00007ffbf0ad9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffbef990000 - 0x00007ffbefaa9000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffbefed0000 - 0x00007ffbeff6a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffbe7500000 - 0x00007ffbe750a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffbf2520000 - 0x00007ffbf2551000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffbeaf60000 - 0x00007ffbeaf6c000 	C:\Program Files\Java\jdk-20\bin\vcruntime140_1.dll
+0x00007ffbd3390000 - 0x00007ffbd341e000 	C:\Program Files\Java\jdk-20\bin\msvcp140.dll
+0x00007ffb2f8d0000 - 0x00007ffb30568000 	C:\Program Files\Java\jdk-20\bin\server\jvm.dll
+0x00007ffbb2f70000 - 0x00007ffbb2f79000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffbe7f30000 - 0x00007ffbe7f64000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffbf0cc0000 - 0x00007ffbf0d31000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffbee9a0000 - 0x00007ffbee9b8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffbeae60000 - 0x00007ffbeae6a000 	C:\Program Files\Java\jdk-20\bin\jimage.dll
+0x00007ffbe5c20000 - 0x00007ffbe5e53000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffbf1850000 - 0x00007ffbf1bd8000 	C:\WINDOWS\System32\combase.dll
+0x00007ffbf2440000 - 0x00007ffbf2517000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffbd2290000 - 0x00007ffbd22c2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffbeff70000 - 0x00007ffbeffe9000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffbeae50000 - 0x00007ffbeae5e000 	C:\Program Files\Java\jdk-20\bin\instrument.dll
+0x00007ffbd3ce0000 - 0x00007ffbd3d06000 	C:\Program Files\Java\jdk-20\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-20\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3235_none_270f74e173860f98;C:\Program Files\Java\jdk-20\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.1\lib\idea_rt.jar=56833:C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
+java_command: Filehandling.copyFile
+java_class_path (initial): D:\CoreJava\out\production\program;C:\Users\hakes\Downloads\mysql-connector-j-8.2.0\mysql-connector-j-8.2.0\mysql-connector-j-8.2.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 123731968                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1973420032                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 1973420032                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-18\bin
+PATH=C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk-18\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Users\hakes\AppData\Roaming\npm;C:\Users\hakes\AppData\Roaming\npm\node_modules\@angular\cli\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\hakes\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\hakes\AppData\Local\Programs\Python\Python311\;C:\Users\hakes\AppData\Local\Microsoft\WindowsApps;C:\Users\hakes\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.1\bin;;C:\Users\hakes\AppData\Local\Programs\Microsoft VS Code Insiders\bin;C:\Users\hakes\AppData\Roaming\npm\node_modules\@angular\cli\bin;C:\Users\hakes\AppData\Local\GitHubDesktop\bin;C:\Users\hakes\AppData\Roaming\npm
+USERNAME=hakes
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
+TMP=C:\Users\hakes\AppData\Local\Temp
+TEMP=C:\Users\hakes\AppData\Local\Temp
+
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.3374)
+OS uptime: 13 days 4:49 hours
+Hyper-V role detected
+
+CPU: total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 25 model 80 stepping 0 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, hv, rdtscp, rdpid, fsrm, f16c, cet_ss
+
+Memory: 4k page, system-wide physical 7521M (484M free)
+TotalPageFile size 31073M (AvailPageFile size 33M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 15M, peak: 16M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (20.0.2+9-78) for windows-amd64 JRE (20.0.2+9-78), built on 2023-06-14T10:08:48Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
